@@ -1,0 +1,11 @@
+lib/egl/egl.cfg
+lib/egl/libEGL_mali.so
+lib/egl/libGLES_android.so
+lib/egl/libGLESv1_CM_mali.so
+lib/egl/libGLESv2_mali.so
+lib/hw/gralloc.mt6582.so
+lib/hw/hwcomposer.mt6582.so
+lib/libMali.so
+lib/libdpframework.so
+lib/libion.so
+lib/libm4u.so

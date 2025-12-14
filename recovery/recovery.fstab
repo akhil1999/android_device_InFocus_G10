@@ -1,10 +1,11 @@
-/boot		      emmc	     /dev/bootimg               flags=display="Boot";backup=1
-/logo		      emmc	     /dev/logo					flags=display="Logo";backup=1
-/nvram		      emmc	     /dev/nvram					flags=display="Nvram";backup=1;flashimg=1
-/recovery	      emmc	     /dev/recovery			    flags=display="Recovery";backup=1;flashimg=1
-/system		      ext4	     /emmc@android 
-/cache		      ext4	     /emmc@cache
-/data		      ext4	     /emmc@usrdata              length=-16384
-/secro 	          emmc       /dev/sec_ro                flags=subpartitionof=/nvram;backup=1
-/external_sd  	  auto	     /dev/block/mmcblk1p1	/dev/block/mmcblk1	flags=display="Micro SD";storage;wipeingui;removable
-/usb-otg	      auto	     /dev/block/sda1		/dev/block/sda		flags=display="Usb-Otg";storage;wipeingui;removable
+# Android fstab file.
+#<src>           <mnt_point>         <type>    <mnt_flags and options>                 <fs_mgr_flags>
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+
+/dev/block/mmcblk0p2  /boot       emmc  defaults                                                    defaults
+/dev/block/mmcblk0p3  /recovery   emmc  defaults                                                    defaults
+/dev/block/mmcblk0p9  /system     ext4  ro                                                          wait
+/dev/block/mmcblk0p11 /data       ext4  noatime,nosuid,nodev,noauto_da_alloc,discard                wait,check,encryptable=/dev/block/platform/mtk-msdc.0/by-name/metadata
+/dev/block/mmcblk0p10 /cache      ext4  noatime,nosuid,nodev,noauto_da_alloc,discard                wait,check
+/devices/platform/mtk-msdc.1/mmc_host            auto        vfat  defaults                                                    voldmanaged=sdcard0:auto,noemulatedsd
