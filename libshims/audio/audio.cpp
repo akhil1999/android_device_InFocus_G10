@@ -1,0 +1,12 @@
+extern "C" void _ZN7android11AudioSystem24getVoiceUnlockDLInstanceEv(void) {}
+extern "C" void _ZN7android11AudioSystem23GetVoiceUnlockDLLatencyEv(void) {}
+extern "C" void _ZN7android11AudioSystem17SetVoiceUnlockSRCEjj(void) {}
+extern "C" void _ZN7android11AudioSystem18startVoiceUnlockDLEv(void) {}
+extern "C" void _ZN7android11AudioSystem15ReadRefFromRingEPvjS1_(void) {}
+extern "C" void _ZN7android11AudioSystem20GetVoiceUnlockULTimeEPv(void) {}
+extern "C" void _ZN7android11AudioSystem25freeVoiceUnlockDLInstanceEv(void) {}
+extern "C" void _ZN7android11AudioSystem17stopVoiceUnlockDLEv(void) {}
+extern "C" void _ZN7android15IATVCtrlService11asInterfaceERKNS_2spINS_7IBinderEEE(void) {}
+extern "C" void _ZN7android11AudioSystem12SetAudioDataEijPv(void) {}
+extern "C" void _ZN7android11AudioSystem15SetAudioCommandEii(void) {}
+extern "C" void _ZN7android11AudioSystem15GetAudioCommandEiPi(void) {}

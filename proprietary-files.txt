@@ -5,6 +5,8 @@ lib/egl/libGLESv1_CM_mali.so
 lib/egl/libGLESv2_mali.so
 lib/hw/gralloc.mt6582.so
 lib/hw/hwcomposer.mt6582.so
+lib/hw/lights.default.so
+lib/hw/sensors.default.so
 lib/libMali.so
 lib/libdpframework.so
 lib/libion.so

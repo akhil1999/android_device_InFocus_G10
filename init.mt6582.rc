@@ -75,3 +75,20 @@ service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emul
 service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/sdcard1 /storage/sdcard1
     class late_start
     disabled
+
+service audio-daemon /system/bin/audiocmdservice_atci
+    class main
+    socket atci-audio stream 660 root system
+    user root
+    disabled
+    oneshot
+
+service nvram_daemon /system/bin/nvram_daemon
+    class main
+    user nvram
+    group nvram system
+    oneshot
+
+service NvRAMAgent /system/bin/nvram_agent_binder
+		user system
+		group system nvram
